@@ -1,3 +1,5 @@
+export type When = "today" | "tomorrow";;
+
 export interface ITodo {
     id: number;
     text: string;

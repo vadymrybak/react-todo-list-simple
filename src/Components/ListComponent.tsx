@@ -1,6 +1,18 @@
+import React, { useEffect } from "react";
 import { ITodo } from "../Data";
 
-const ListComponent = ({ todos }: { todos: ITodo[] }) => {
+const ListComponent = React.memo(({ todos }: { todos: ITodo[] }) => {
+    console.log("ListComponent RENDER", todos);
+
+    useEffect(() => {
+        console.log("ListComponent MOUNTED");
+
+        return () => {
+            console.log("ListComponent UN_MOUNTED");
+
+        }
+    }, [])
+
     return (
         <div>
             <ul>
@@ -9,6 +21,6 @@ const ListComponent = ({ todos }: { todos: ITodo[] }) => {
             </ul>
         </div>
     );
-};
+});
 
 export default ListComponent;
