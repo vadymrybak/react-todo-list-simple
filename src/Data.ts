@@ -3,7 +3,7 @@ export interface ITodo {
     text: string;
 }
 
-interface ITodoList {
+export interface ITodoList {
     today: ITodo[];
     tomorrow: ITodo[];
 }

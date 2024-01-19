@@ -10,5 +10,5 @@ const ListComponent = ({ todos }: { todos: ITodo[] }) => {
         </div>
     );
 };
-``
+
 export default ListComponent;
